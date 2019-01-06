@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/border_calendar_row"
+    android:padding="10dp"
+    android:id="@+id/calendar_row_total">
+
+    <ImageView
+        android:id="@+id/calendar_row_plus"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:tint="@color/ospedal_green"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/plus" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/notte"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <TextView
+            android:id="@+id/calendar_row_nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/calendar_row_dott_sigla" />
+
+        <TextView
+            android:id="@+id/calendar_row_dott_sigla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Dott."
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:tint="@color/white"
+            android:background="@color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendar_row_dott_sigla"
+            android:src="@android:drawable/stat_sys_phone_call" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/calendar_row_numero_dottore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/calendar_row_nome"
+            app:srcCompat="@drawable/moon" />
+
+        <TextView
+            android:id="@+id/calendar_row_numero_dottore"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/calendar_row_nome"
+            app:layout_constraintTop_toBottomOf="@+id/calendar_row_nome" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/calendar_row_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/cielo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendar_row_data">
+
+        <TextView
+            android:id="@+id/calendar_row_nome_giorno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/calendar_row_dott_sigla_giorno" />
+
+        <TextView
+            android:id="@+id/calendar_row_dott_sigla_giorno"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Dott."
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView3_notte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:tint="@color/blue_call"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendar_row_dott_sigla_giorno"
+            app:srcCompat="@android:drawable/stat_sys_phone_call" />
+
+        <ImageView
+            android:id="@+id/imageView5_giorno"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/calendar_row_numero_dottore_giorno"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/calendar_row_nome_giorno"
+            app:srcCompat="@drawable/sun" />
+
+        <TextView
+            android:id="@+id/calendar_row_numero_dottore_giorno"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/calendar_row_nome_giorno"
+            app:layout_constraintTop_toBottomOf="@+id/calendar_row_nome_giorno" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
